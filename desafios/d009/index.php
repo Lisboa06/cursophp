@@ -37,7 +37,7 @@
             $mp = ($valor1 * $peso1 + $valor2 * $peso2)/($valor1 + $peso2);
         ?>
         <h2>Cálculo das Médias</h2>
-        <p>Analisando os valores {} e {}:</p>
+        <p>Analisando os valores <?=$valor1?> e <?=$valor2?>:</p>
         <ul>
             <li>A <strong>Média Aritmética Simples</strong> entre os valores é igual a <strong><?=number_format($ma, 2, ",", ".")?></strong></li>
             <li>A <strong>Média Aritmética Ponderada</strong> com pesos <strong><?=$peso1?></strong> e <strong><?=$peso2?></strong> é igual a <strong><?=number_format($mp, 2, ",", ".")?></strong></li>
