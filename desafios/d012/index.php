@@ -20,15 +20,32 @@
             <input type="submit" value="Calcular">
         </form>
     </main>
+    <?php 
+        $sobra = $total;
+        // total de semanas
+        $semana = (int)($sobra / 604_800);
+        $sobra = $sobra % 604_800;
+        // total de dias
+        $dia = (int)($sobra / 86_400);
+        $sobra = $sobra % 86_400;
+        // total de horas
+        $hora = (int)($sobra / 3_600);
+        $sobra = $sobra % 3_600;
+        // total de minutos
+        $minuto = (int)($sobra / 60);
+        $sobra = $sobra % 60;
+        // segundos
+        $segundo = $sobra;
+    ?>
     <section>
         <h2>Totalizando tudo</h2>
-        <p>Analisando o valor que você digitou, [??] segundos equivalem a um total de:</p>
+        <p>Analisando o valor que você digitou, <strong><?=number_format($total, 0 ,",", ".")?> segundos</strong> equivalem a um total de:</p>
         <ul>
-            <li>[??] semanas</li>
-            <li>[??] dias</li>
-            <li>[??] horas</li>
-            <li>[??] minutos</li>
-            <li>[??] segundos</li>
+            <li><?=$semana?> semanas</li>
+            <li><?=$dia?> dias</li>
+            <li><?=$hora?> horas</li>
+            <li><?=$minuto?> minutos</li>
+            <li><?=$segundo?> segundos</li>
         </ul>
     </section>
 </body>
